@@ -9,7 +9,6 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import { Appbar } from "~/components/Appbar";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -34,7 +33,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Appbar />
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -74,4 +72,13 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
       )}
     </main>
   );
+}
+
+
+export function HydrateFallback() {
+  return (
+    <div className="flex items-center justify-center h-[80svh]">
+      Loading...
+    </div>
+  )
 }
