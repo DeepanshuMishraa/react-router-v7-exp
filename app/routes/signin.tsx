@@ -23,7 +23,7 @@ export default function SignIn() {
           provider: "linkedin",
           fetchOptions: {
             onSuccess: () => {
-              navigate("http://localhost:5173/dashboard")
+              navigate("/dashboard")
             },
             onError: (error) => {
               console.error(error)

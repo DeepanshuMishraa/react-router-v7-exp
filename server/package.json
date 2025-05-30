@@ -15,8 +15,10 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@hono/zod-validator": "^0.7.0",
     "@prisma/client": "^6.8.2",
     "better-auth": "^1.2.8",
-    "hono": "^4.7.10"
+    "hono": "^4.7.10",
+    "zod": "^3.25.42"
   }
 }
